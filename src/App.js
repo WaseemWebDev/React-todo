@@ -1,15 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import Todo from './todo';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       
-       
-        <p>first react and github workflow</p>
-      </header>
+      <Todo />
     </div>
   );
 }
