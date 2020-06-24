@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import List from './list';
 
 function Todo() {
     const [todo, setTodo] = useState([]);
     let [text, setText] = useState("");
-    const inputRef = useRef();
+    
 
 
     const addItem = () => {
@@ -61,9 +61,7 @@ function Todo() {
         console.log(newTodos)
     }
 
-    function focusInput() {
-        inputRef.current.focus();
-    }
+   
 
 
     return (
