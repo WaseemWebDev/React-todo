@@ -4,9 +4,6 @@ import List from './list';
 function Todo() {
     const [todo, setTodo] = useState([]);
     let [text, setText] = useState("");
-    
-
-
     const addItem = () => {
         if (text === "") {
             alert("field can not be empty");
@@ -22,9 +19,6 @@ function Todo() {
         }
 
     }
-
-
-
 
     // const findItem = id => {
     //     const item = todo.find(task => task.id === id)
@@ -60,21 +54,17 @@ function Todo() {
         setTodo(newTodos);
         console.log(newTodos)
     }
-
-   
-
-
     return (
         <>
             <div className="main-frame" >
 
                 <input type="text" value={text} onChange={e => setText(e.target.value)} />
-                <button onClick={addItem}>Add a number</button>
+                <button onClick={addItem}>Add Todo</button>
                 <button onClick={clearTodo}>clear</button>
                 <br />
                 <ol>
                     {todo.map((item, index) => {
-                        return <List item={item.value} key={index} id={index} onSelect={deleteItem} setUpdate={setUpdate} focusInput={focusInput} ref={inputRef} />
+                        return <List item={item.value} key={index} id={index} onSelect={deleteItem} setUpdate={setUpdate} />
                     })}
                 </ol>
                 {todo.length ? <span style={{ fontWeight: "bold", color: `${todo.length ? "green" : "red"}` }}>Total todos {todo.length}</span> : <h3 style={{ color: "red" }}>No Items Found</h3>}

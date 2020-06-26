@@ -9,12 +9,10 @@ function List(props) {
 
     return (
         <div style={{ padding: "5px" }}>
-
             <li >
-
-                <input className="lists" autocomplete="off" style={{ textDecoration: line ? "line-through" : "none", fontWeight: "bold" }} type="text" id={props.id} value={props.item} onChange={(e) => {
+                <input className="lists " autocomplete="off" style={{ textDecoration: line ? "line-through" : "none", fontWeight: "bold" }} type="text" id={props.id} value={props.item} onChange={(e) => {
                     props.setUpdate(e, props.id)
-                }} /> <span  className="edit">Edit</span>
+                }} /> <span className="edit">Edit</span>
                 <span style={{ marginLeft: "200px" }}><button onClick={() => {
                     props.onSelect(props.id)
                 }}>Delete
